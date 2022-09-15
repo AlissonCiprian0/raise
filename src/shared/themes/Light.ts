@@ -40,6 +40,6 @@ export const LightTheme = createTheme({
     },
   },
   shape: {
-    borderRadius: 8,
+    borderRadius: 3,
   },
 });

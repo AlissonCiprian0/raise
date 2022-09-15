@@ -4,7 +4,7 @@ import Account from '../features/Account/pages/Account';
 import AddTicket from '../features/Home/components/AddTicket/AddTicket';
 import ConfirmAddWindow from '../features/Home/components/ConfirmAddWindow/ConfirmAddWindow';
 import ConfirmDeleteWindow from '../features/Home/components/ConfirmDeleteWindow/ConfirmDeleteWindow';
-import Home from '../features/Home/page/Home';
+import Home from '../features/Home/pages/Home/Home';
 import Login from '../features/Login/pages/Login';
 import Ticket from '../features/Ticket/pages/Ticket/Ticket';
 import { Navigate } from 'react-router-dom';
@@ -47,7 +47,12 @@ const AppRoutes = [
   },
   {
     path: '/login',
-    element: <Login />,
+    element: (
+      <>
+        <MainMenu links={[menuLinks.home, menuLinks.about]} />
+        <Login />
+      </>
+    ),
   },
   {
     path: '/account',
