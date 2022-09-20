@@ -20,7 +20,7 @@ const AppRoutes = [
     path: '/home',
     element: (
       <>
-        <MainMenu links={[menuLinks.home, menuLinks.about]} />
+        <MainMenu links={[menuLinks.home, menuLinks.about, menuLinks.login]} />
         <Home />
       </>
     ),
@@ -49,7 +49,7 @@ const AppRoutes = [
     path: '/login',
     element: (
       <>
-        <MainMenu links={[menuLinks.home, menuLinks.about]} />
+        <MainMenu links={[menuLinks.home, menuLinks.about, menuLinks.login]} />
         <Login />
       </>
     ),

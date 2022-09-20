@@ -1,7 +1,8 @@
 import Logo from '../Logo/Logo';
-import { AppBar, Box, Link, Toolbar } from '@mui/material';
+import MenuIcon from '../../assets/svg/menu.svg';
+import { Box, Link, Toolbar } from '@mui/material';
 import { MenuLink } from '../../constants/types';
-import { menuItemStyles, menuListStyles } from './constants';
+import StyledMainMenu from './MainMenu.styles';
 
 interface iMainMenuProps {
   links: MenuLink[];
@@ -10,14 +11,14 @@ interface iMainMenuProps {
 const MainMenu = ({ links }: iMainMenuProps) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='fixed' sx={{ padding: '10px 10px 10px 5vw' }}>
-        <Toolbar sx={{ display: 'flex' }}>
+      <StyledMainMenu position='fixed'>
+        <Toolbar>
           <Logo size={230} text />
 
-          <Box sx={{ marginLeft: 'auto' }}>
-            <ul style={menuListStyles}>
+          <Box>
+            <ul>
               {links.map((link, index) => (
-                <li style={menuItemStyles} key={index}>
+                <li key={index}>
                   <Link
                     href={link.url}
                     color='inherit'
@@ -27,10 +28,14 @@ const MainMenu = ({ links }: iMainMenuProps) => {
                   </Link>
                 </li>
               ))}
+
+              <li className='Menu-hamburger'>
+                <img src={String(MenuIcon)} />
+              </li>
             </ul>
           </Box>
         </Toolbar>
-      </AppBar>
+      </StyledMainMenu>
     </Box>
   );
 };

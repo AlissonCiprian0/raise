@@ -1,30 +1,20 @@
 import { useTheme } from '@mui/material/styles';
 import { Box, Button, Typography } from '@mui/material';
 import { PageStyles } from '../../../styles';
-import { LoginStyles } from './LoginStyles';
 import Logo from '../../../components/Logo/Logo';
-import { StyledTextField } from './StyledComponents/StyledTextField';
+import { StyledLogin, StyledTextField } from './Login.styles';
 
 const Login = () => {
   const theme = useTheme();
 
   return (
-    <Box
+    <StyledLogin
       className='Login Page'
       sx={{
         ...PageStyles,
-        ...LoginStyles,
-        backgroundColor: theme.palette.secondary.light,
       }}
     >
-      <Box
-        sx={{
-          backgroundColor: theme.palette.primary.main,
-          borderRadius: theme.shape.borderRadius,
-          boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-          padding: 8,
-        }}
-      >
+      <Box className='Login-container'>
         <Typography color='#696868' fontSize={22} fontWeight={500}>
           Ticket Management
         </Typography>
@@ -115,7 +105,7 @@ const Login = () => {
           </Button>
         </Box>
       </Box>
-    </Box>
+    </StyledLogin>
   );
 };
 

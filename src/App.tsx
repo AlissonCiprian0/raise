@@ -11,7 +11,7 @@ const Routes = () => {
 
 const App = () => {
   return (
-    //<AppThemeProvider>
+    // <AppThemeProvider>
     <ThemeProvider theme={LightTheme}>
       <div className='App' data-testid='App'>
         <BrowserRouter>
@@ -19,7 +19,7 @@ const App = () => {
         </BrowserRouter>
       </div>
     </ThemeProvider>
-    //</AppThemeProvider>
+    // </AppThemeProvider>
   );
 };
 export default App;

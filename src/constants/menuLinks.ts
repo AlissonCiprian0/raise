@@ -15,6 +15,10 @@ const menuLinks = {
     text: 'MINHA CONTA',
     url: '/account',
   },
+  login: {
+    text: 'LOGIN',
+    url: '/login',
+  },
 };
 
 export default menuLinks;
