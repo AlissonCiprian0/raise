@@ -13,4 +13,8 @@ function login(email: string, password: string, code: string): boolean {
   return true;
 }
 
-export { login };
+function logout() {
+  localStorage.setItem('user', '');
+}
+
+export { login, logout };

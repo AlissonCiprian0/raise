@@ -1,4 +1,4 @@
-import { login } from '../services/UserService';
+import { login, logout } from '../services/UserService';
 
 class User {
   email: string;
@@ -6,9 +6,17 @@ class User {
   code: string;
 
   constructor(email: string, password: string, code: string) {
-    this.email = email;
-    this.password = password;
-    this.code = code;
+    if (localStorage.getItem('user')) {
+      const userData = JSON.parse(localStorage.getItem('user') || '');
+
+      this.email = userData.email;
+      this.password = userData.password;
+      this.code = userData.code;
+    } else {
+      this.email = email;
+      this.password = password;
+      this.code = code;
+    }
   }
 
   authenticate(email: string, password: string, code: string) {
@@ -16,8 +24,10 @@ class User {
       this.email = email;
       this.password = password;
       this.code = code;
+
+      window.location.href = '/home';
     } else {
-      console.log('Erro ao logar');
+      alert('Erro ao logar');
     }
   }
 
@@ -32,6 +42,14 @@ class User {
   isLogged() {
     if (this.email !== '') return true;
     return false;
+  }
+
+  exit() {
+    logout();
+    this.email = '';
+    this.password = '';
+    this.code = '';
+    window.location.href = '/home';
   }
 }
 

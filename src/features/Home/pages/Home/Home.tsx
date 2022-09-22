@@ -1,7 +1,6 @@
 import { useTheme } from '@mui/material/styles';
 import { Box } from '@mui/system';
 import User from '../../../../models/User';
-import { PageStyles } from '../../../../styles';
 
 const Home = () => {
   const theme = useTheme();
@@ -11,7 +10,6 @@ const Home = () => {
       <Box
         className='Page'
         sx={{
-          ...PageStyles,
           backgroundColor: theme.palette.secondary.light,
         }}
       >

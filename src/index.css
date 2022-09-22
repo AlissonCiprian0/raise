@@ -6,3 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.Page {
+  margin-top: 84px;
+  padding: 80px;
+  box-sizing: border-box;
+}
