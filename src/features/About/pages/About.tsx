@@ -1,5 +1,19 @@
+import { useTheme } from '@mui/material/styles';
+import { Box } from '@mui/system';
+
 const About = () => {
-  return <>About</>;
+  const theme = useTheme();
+
+  return (
+    <Box
+      className='Page'
+      sx={{
+        backgroundColor: theme.palette.secondary.light,
+      }}
+    >
+      Sobre
+    </Box>
+  );
 };
 
 export default About;

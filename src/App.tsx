@@ -5,6 +5,7 @@ import AppRoutes from './routes/routes';
 import { ThemeProvider } from '@mui/material/styles';
 import { LightTheme } from './shared/themes';
 import User from './models/User';
+import { Footer } from './components/Footer/Footer';
 
 const Routes = () => {
   return useRoutes(AppRoutes);
@@ -20,6 +21,8 @@ const App = () => {
         <BrowserRouter>
           <Routes />
         </BrowserRouter>
+
+        <Footer />
       </div>
     </ThemeProvider>
     // </AppThemeProvider>

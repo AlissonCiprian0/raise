@@ -1,4 +1,4 @@
-import { AppBar, Toolbar } from '@mui/material';
+import { AppBar } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 // const matches = useMediaQuery('(min-width: 960px)');
