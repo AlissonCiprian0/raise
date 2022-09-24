@@ -26,6 +26,8 @@ const Landing = () => {
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
+            boxSizing: 'border-box',
+            padding: '0 5vw',
           }}
         >
           <Box flex={3}>

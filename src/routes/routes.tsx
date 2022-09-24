@@ -1,4 +1,4 @@
-import About from '../features/About/pages/About';
+import About from '../features/About/pages/About/About';
 import PasswordResetWindow from '../features/Account/components/PasswordResetWindow/PasswordResetWindow';
 import Account from '../features/Account/pages/Account';
 import AddTicket from '../features/Home/components/AddTicket/AddTicket';
