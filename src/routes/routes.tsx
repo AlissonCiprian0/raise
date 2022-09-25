@@ -10,6 +10,7 @@ import Ticket from '../features/Ticket/pages/Ticket/Ticket';
 import { Navigate } from 'react-router-dom';
 import MainMenu from '../components/MainMenu/MainMenu';
 import menuLinks from '../constants/menuLinks';
+import User from '../models/User';
 
 const AppRoutes = [
   {
@@ -20,7 +21,13 @@ const AppRoutes = [
     path: '/home',
     element: (
       <>
-        <MainMenu links={[menuLinks.home, menuLinks.about]} />
+        <MainMenu
+          links={
+            User.isLogged()
+              ? [menuLinks.main, menuLinks.account]
+              : [menuLinks.home, menuLinks.about]
+          }
+        />
         <Home />
       </>
     ),

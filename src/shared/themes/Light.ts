@@ -5,6 +5,7 @@ export const LightTheme = createTheme({
     primary: {
       main: '#ffffff',
       light: '#ffffff',
+      dark: 'rgba(244, 244, 244, 1)',
       contrastText: 'rgba(0, 0, 0, 1)',
     },
     secondary: {

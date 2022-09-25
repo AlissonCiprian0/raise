@@ -36,10 +36,10 @@ const StyledMainMenu = styled(AppBar)(({ theme }) => ({
       '& .MuiBox-root ul': {
         '& li': {
           margin: '0',
-          display: 'block',
+          display: 'none',
 
-          '&:not(.Menu-hamburger)': {
-            display: 'none',
+          '&.Menu-hamburger': {
+            display: 'block',
           },
         },
       },
