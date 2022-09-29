@@ -1,11 +1,13 @@
 import { useTheme } from '@mui/material/styles';
 import { Box, Button, Typography } from '@mui/material';
 import Logo from '../../../components/Logo/Logo';
-import { StyledLogin, StyledTextField } from './Login.styles';
+import { StyledLogin } from './Login.styles';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import User from '../../../models/User';
+
+import { StyledTextField } from '../../../components/StyledTextField/StyledTextField';
 
 const schema = yup
   .object({

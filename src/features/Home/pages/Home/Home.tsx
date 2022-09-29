@@ -1,5 +1,4 @@
-import { Button, Paper, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Button, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import User from '../../../../models/User';
 import Landing from '../Landing/Landing';
@@ -8,8 +7,6 @@ import Flower from '../../../../assets/images/Orchid.png';
 import { Ticket } from './Ticket';
 
 const Home = () => {
-  const theme = useTheme();
-
   if (User.isLogged())
     return (
       <HomePage className='Page'>

@@ -68,7 +68,18 @@ const AppRoutes = [
   },
   {
     path: '/account',
-    element: <Account />,
+    element: (
+      <>
+        <MainMenu
+          links={
+            User.isLogged()
+              ? [menuLinks.main, menuLinks.account]
+              : [menuLinks.home, menuLinks.about]
+          }
+        />
+        <Account />
+      </>
+    ),
     children: [
       {
         path: 'password-reset',
