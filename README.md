@@ -3,6 +3,8 @@
 ## How to run
 
 ### Open a terminal in the project folder and run:
+npm install
+
 npm run build
 
 ### Wait the build process to finish and then follow the terminal instructions
