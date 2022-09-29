@@ -1,25 +1,25 @@
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
-export const Call = () => {
+export const Ticket = () => {
   return (
-    <Box className='HomePage-call'>
-      <Box className='HomePage-call-left'>
-        <Typography className='HomePage-call-title'>
+    <Box className='HomePage-ticket'>
+      <Box className='HomePage-ticket-left'>
+        <Typography className='HomePage-ticket-title'>
           Ticket #12086 - Agendamento de férias
         </Typography>
 
-        <Typography className='HomePage-call-description'>
+        <Typography className='HomePage-ticket-description'>
           Olá, boa noite! Gostaria de realizar o agendamento de min...
         </Typography>
       </Box>
 
-      <Box className='HomePage-call-right'>
-        <Typography className='HomePage-call-time'>
+      <Box className='HomePage-ticket-right'>
+        <Typography className='HomePage-ticket-time'>
           Aberto há 14h27min
         </Typography>
 
-        <Typography className='HomePage-call-attendant'>
+        <Typography className='HomePage-ticket-attendant'>
           Em atendimento por: Erick Silva
         </Typography>
       </Box>

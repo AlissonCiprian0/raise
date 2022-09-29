@@ -5,7 +5,7 @@ import User from '../../../../models/User';
 import Landing from '../Landing/Landing';
 import { HomePage } from './HomePage.styles';
 import Flower from '../../../../assets/images/Orchid.png';
-import { Call } from './Call';
+import { Ticket } from './Ticket';
 
 const Home = () => {
   const theme = useTheme();
@@ -18,15 +18,15 @@ const Home = () => {
             Boa tarde, {User.getUser().name}!
           </Typography>
 
-          <Box className='HomePage-call-container'>
+          <Box className='HomePage-ticket-container'>
             <Typography
               variant='subtitle1'
-              className='HomePage-call-container-title'
+              className='HomePage-ticket-container-title'
             >
               Boas-vindas de volta!
             </Typography>
 
-            <Box className='HomePage-call-container-body'>
+            <Box className='HomePage-ticket-container-body'>
               <Button variant='contained'>Abrir im novo chamado</Button>
 
               <img src={Flower} />
@@ -40,22 +40,22 @@ const Home = () => {
         </Box>
 
         <Box className='HomePage-section'>
-          <Box className='HomePage-open-calls-container'>
-            <Box className='HomePage-open-calls'>
+          <Box className='HomePage-open-tickets-container'>
+            <Box className='HomePage-open-tickets'>
               <Typography variant='h3'>
                 Seus chamados em atendimento!
               </Typography>
 
-              <Call />
-              <Call />
-              <Call />
+              <Ticket />
+              <Ticket />
+              <Ticket />
             </Box>
 
-            <Box className='HomePage-open-calls'>
+            <Box className='HomePage-open-tickets'>
               <Typography variant='h3'>Seus chamados encerrados!</Typography>
 
-              <Call />
-              <Call />
+              <Ticket />
+              <Ticket />
             </Box>
           </Box>
         </Box>

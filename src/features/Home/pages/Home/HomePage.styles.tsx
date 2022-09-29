@@ -28,15 +28,15 @@ export const HomePage = styled(Box)(({ theme }) => ({
       marginBottom: 15,
     },
 
-    '& .HomePage-call-container': {
-      width: '80%',
+    '& .HomePage-ticket-container': {
+      width: 'clamp(25vw, 80%, 90vw)',
       display: 'flex',
       flexDirection: 'column',
       backgroundColor: theme.palette.primary.main,
       borderRadius: 5,
       overflow: 'hidden',
 
-      '& .HomePage-call-container-title': {
+      '& .HomePage-ticket-container-title': {
         backgroundColor: theme.palette.secondary.light,
         textAlign: 'center',
         padding: 5,
@@ -44,7 +44,7 @@ export const HomePage = styled(Box)(({ theme }) => ({
         fontWeight: 600,
       },
 
-      '& .HomePage-call-container-body': {
+      '& .HomePage-ticket-container-body': {
         boxSizing: 'border-box',
         padding: 50,
         display: 'flex',
@@ -70,17 +70,18 @@ export const HomePage = styled(Box)(({ theme }) => ({
       },
     },
 
-    '& .HomePage-open-calls-container': {
+    '& .HomePage-open-tickets-container': {
       paddingTop: 5,
       width: '100%',
 
-      '& .HomePage-open-calls': {
+      '& .HomePage-open-tickets': {
         marginBottom: 30,
         width: '100%',
 
-        '& .HomePage-call': {
+        '& .HomePage-ticket': {
           backgroundColor: theme.palette.primary.main,
           width: '100%',
+          boxSizing: 'border-box',
           padding: '15px 35px',
           borderRadius: 10,
           display: 'flex',
@@ -88,32 +89,55 @@ export const HomePage = styled(Box)(({ theme }) => ({
           gap: 50,
           marginBottom: 30,
 
-          '& .HomePage-call-title': {
+          '& .HomePage-ticket-title': {
             fontWeight: 500,
             fontSize: '20px',
             color: theme.palette.text.secondary,
           },
 
-          '& .HomePage-call-description': {
+          '& .HomePage-ticket-description': {
             fontWeight: 500,
             fontSize: '14px',
             color: theme.palette.text.secondary,
             marginTop: 15,
           },
 
-          '& .HomePage-call-time': {
+          '& .HomePage-ticket-time': {
             fontWeight: 500,
             fontSize: '20px',
             color: 'rgba(216, 84, 84, 0.72)',
           },
 
-          '& .HomePage-call-attendant': {
+          '& .HomePage-ticket-attendant': {
             fontWeight: 600,
             fontSize: '14px',
             color: '#686464',
             marginTop: 15,
           },
         },
+      },
+    },
+  },
+
+  '@media (max-width: 1400px)': {
+    '& .HomePage-section': {
+      gap: 5,
+      padding: '0 2vw',
+    },
+  },
+
+  '@media (max-width: 1024px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '120px 2vw',
+
+    '& .HomePage-section': {
+      '& .HomePage-ticket-container': {
+        width: '100%',
+        padding: 0,
+      },
+      '& .HomePage-open-tickets-container': {
+        paddingTop: 30,
       },
     },
   },

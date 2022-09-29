@@ -30,7 +30,7 @@ const Login = () => {
   });
 
   const onSubmit = (data) => {
-    User.authenticate(data.user, data.password, data.code);
+    User.authenticate(data.user, data.password, data.code, data.user);
   };
 
   return (
